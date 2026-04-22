@@ -8,4 +8,4 @@
 [ルールはこちら](https://github.com/toki-linux/How-to-use-Github/blob/main/rules.md)
 
 ## 学習記録(ログ)
-[ログ](https://github.com/toki-linux/linux-practice-clean/blob/main/rogu)
+[ログ](https://github.com/toki-linux/linux-practice-clean/tree/main/logs)
