@@ -8,4 +8,4 @@ SSHをテーマにしたフォルダです
 - scpによるファイルの転送
 
 ## 学習ログ
-- [2pc ssh接続(2026-04-21)]()
+- [2pc ssh接続(2026-04-21)](https://github.com/toki-linux/linux-practice-clean/blob/main/logs/SSH/2pc_ssh.md)
