@@ -5,5 +5,5 @@
 見てもらう意識でかくリポジトリ。
 
 ## ルール
-[ルール](https://github.com/toki/How-to-use-Github/blob/main/linux-practice-clean/README.md
+[ルール](https://github.com/toki-linux/How-to-use-Github/blob/main/linux-practice-clean/README.md
 
