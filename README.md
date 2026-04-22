@@ -5,5 +5,5 @@
 見てもらう意識でかくリポジトリ。
 
 ## ルール
-[ルール](https://github.com/toki-linux/How-to-use-Github/blob/main/rules.md)
+[ルールはこちら](https://github.com/toki-linux/How-to-use-Github/blob/main/rules.md)
 
