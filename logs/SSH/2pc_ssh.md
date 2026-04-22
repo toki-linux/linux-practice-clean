@@ -32,4 +32,4 @@
 
 7. 鍵認証で接続
 ```bash
-
+ssh -i ~/.ssh/win_key user@IPアドレス
