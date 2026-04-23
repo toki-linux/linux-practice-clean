@@ -3,5 +3,5 @@
 
 ## 学習記録(ログ)
 - [SSH](https://github.com/toki-linux/linux-practice-clean/tree/main/logs/SSH)
-- nginx
+- nginx(https://github.com/toki-linux/linux-practice-clean/tree/main/logs/nginx)
 - network
