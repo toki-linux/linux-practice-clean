@@ -1,0 +1,74 @@
+# CLI操作
+
+## 基本
+- スクロールの代わりに `less` を使う  
+- 設定変更をする場合はVMを一度停止する  
+- Linuxではスクロールバーではなくコマンドで履歴を確認する  
+
+---
+
+## よく使うコマンド
+- `history`：過去のコマンド履歴を確認  
+- `dmesg`：カーネルログを確認  
+- `cat`：ファイル内容をそのまま表示  
+- `less`：スクロールしながらファイルを読む  
+
+---
+
+## less の操作
+- ↑ ↓：1行ずつ移動  
+- space：1ページ進む  
+- b：1ページ戻る  
+- q：終了  
+
+※ `~` は終端（これ以上下に何もないことを示す）
+
+---
+
+## ログ確認で使うコマンド
+
+### 全体をざっと見る
+```bash
+less /var/log/nginx/access.log
+```
+
+### リアルタイム監視
+```bash
+tail -f /var/log/nginx/access.log
+```
+
+### エラーを探す
+```bash
+grep error /var/log/nginx/access.log
+```
+
+### ステータスコード確認（404）
+```bash
+grep " 404 " /var/log/nginx/access.log
+```
+
+### IPごとに集計（攻撃検知の基礎）
+```bash
+awk '{print $1}' /var/log/nginx/access.log | sort | uniq -c
+```
+
+- awk：IP抽出  
+- sort：並び替え  
+- uniq -c：回数カウント  
+
+→ 回数が多いIPは怪しい  
+
+---
+
+### 組み合わせ（応用）
+```bash
+grep " 404 " /var/log/nginx/access.log | awk '{print $1}' | sort | uniq -c
+```
+
+→ 404を出しているIPのみ集計  
+
+---
+
+## 補足
+- ログの場所は `/var/log/` 配下に多い  
+- 見つからない場合は `find` コマンドで検索するのも有効  
