@@ -5,3 +5,4 @@
 - [SSH](https://github.com/toki-linux/linux-practice-clean/tree/main/logs/SSH)
 - [nginx](https://github.com/toki-linux/linux-practice-clean/tree/main/logs/nginx)
 - [network]()
+- [CLI操作]()
