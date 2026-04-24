@@ -1,0 +1,21 @@
+■ 環境
+- VirtualBox上のUbuntu
+- nginx使用
+- MacからSSH接続
+- ポートフォワーディング使用
+
+■ 前提確認（環境設定）
+【タイムゾーン】
+ログの時刻がズレていたため確認
+
+原因：
+UTCになっていた
+
+確認：
+date
+
+対応：
+timedatectl set-timezone Asia/Tokyo
+
+ポイント：
+ログ解析では時刻のズレが原因特定を困難にする
