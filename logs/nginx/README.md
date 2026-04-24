@@ -7,3 +7,4 @@
 
 ## 学習記録(ログ)
 - [webページを作ろう(2026-04-23)](https://github.com/toki-linux/linux-practice-clean/blob/main/logs/nginx/create%20webpage)
+- [nginxトラブルシュート演習]（）
