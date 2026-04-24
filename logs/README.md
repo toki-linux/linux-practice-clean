@@ -6,3 +6,4 @@
 - [nginx](https://github.com/toki-linux/linux-practice-clean/tree/main/logs/nginx)
 - [network]()
 - [CLI操作](https://github.com/toki-linux/linux-practice-clean/tree/main/logs/CLI)
+- [environment]()
