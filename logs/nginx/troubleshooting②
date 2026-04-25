@@ -1,0 +1,136 @@
+# 🔧 Linux / Nginx / SSH トラブルシューティング（1枚まとめ）
+
+---
+
+## 🎯 基本の切り分け順（最重要）
+通信 → ポート → サービス → アプリ → 認証
+
+---
+
+# ■ 課題②：アクセスは来るがページ表示されない
+
+【症状】
+・ブラウザ表示NG  
+・access.logに記録あり  
+・nginx起動中  
+
+【ログ】
+・access.log → 403 / 404  
+・error.log → permission denied / file not found  
+
+【原因と解決】
+
+① 設定ミス（403）
+・原因：deny all; により全拒否  
+・解決：コメントアウトしてreload  
+
+② ファイルなし（404）
+・原因：/var/www/html にファイルがない  
+・解決：mvで戻す  
+
+③ 権限ミス（403）
+・原因：www-dataが読めない  
+・解決：chmod 644  
+
+【ポイント】
+・アクセスログあり＝nginxまでは正常  
+・表示NG＝設定 / ファイル / 権限  
+
+---
+
+# ■ 課題③：nginx停止
+
+【症状】
+・Web表示NG  
+・SSH可能  
+
+【原因】
+・nginxサービス停止  
+
+【確認】
+systemctl status nginx  
+journalctl -u nginx  
+
+【解決】
+systemctl start nginx  
+
+【ポイント】
+・サービス停止＝ポートも閉じる  
+・ログはjournalctlを見る  
+
+---
+
+# ■ 課題④：外部からアクセス不可
+
+【症状】
+・Ubuntu内OK  
+・外部NG  
+
+【原因】
+・ファイアウォール（ufw）  
+
+【操作】
+ufw deny 80  
+
+【解決】
+ufw allow 80  
+または  
+ufw disable  
+
+【ポイント】
+・外だけNG＝ネットワーク層  
+
+---
+
+# ■ SSHトラブル（今回）
+
+【症状】
+・SSH接続NG  
+・nc成功（ポートOK）  
+・tcpdumpあり（通信OK）  
+・auth.logなし  
+・kex_exchangeで切断  
+
+【原因】
+・UFWがSSHセッション途中で遮断  
+
+【解決】
+ufw disable  
+
+【ポイント】
+・ポートが通る ≠ 通信が正常  
+・tcpdumpあり + auth.logなし → アプリ前で停止  
+・ファイアウォールは途中で切ることがある  
+
+---
+
+# ■ nginx構造
+
+/etc/nginx/nginx.conf  
+↓  
+/etc/nginx/sites-enabled/  
+↓（リンク）  
+/etc/nginx/sites-available/default  
+
+---
+
+# ■ エラーコード
+
+403 → 権限エラー  
+404 → ファイルなし  
+
+---
+
+# 🧠 トラブルシューティング思考
+
+① レイヤーで切る  
+② ログの有無で位置特定  
+③ 仮説を立てる  
+④ 一つずつ潰す  
+⑤ 一つだけ変えて検証  
+
+---
+
+# 🔚 本質
+
+「どこまで処理が進んでいるか」を見極める
