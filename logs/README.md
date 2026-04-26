@@ -9,5 +9,4 @@
 - [environment](https://github.com/toki-linux/linux-practice-clean/tree/main/logs/environment)
 
 
-## まとめ
-- [インフラ基礎]()
+## [まとめ](https://github.com/toki-linux/linux-practice-clean/tree/main/logs/summary)
