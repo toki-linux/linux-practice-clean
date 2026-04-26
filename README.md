@@ -16,13 +16,6 @@ Linux環境における構築・トラブルシュート・ログ解析の学習
 - [CLI操作](logs/CLI)
 - [environment](logs/environment)
 
-## 学習方針
-実際にエラーを再現し、ログから原因を特定し、解決まで行うことで実務を意識した学習を実施
-このリポジトリについて
-
-### 概要
-Linux環境の構築およびインフラ技術の学習ログとポートフォリオ
-
 ## 書式のルール
 [ルールはこちら](https://github.com/toki-linux/How-to-use-Github/blob/main/rules.md)
 
