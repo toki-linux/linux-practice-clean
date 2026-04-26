@@ -1,5 +1,5 @@
 ## このフォルダについて
-このフォルダは学習内容を記録をまとめて目次形式にしたものです。
+このフォルダは学習内容を記録しまとめて目次形式にしたものです。
 
 ## 学習記録(ログ)
 - [SSH](https://github.com/toki-linux/linux-practice-clean/tree/main/logs/SSH)
