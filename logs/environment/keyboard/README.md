@@ -7,4 +7,4 @@
 
 ## 学習記録(ログ)
 - [別のターミナルを開くMac.ver](https://github.com/toki-linux/linux-practice-clean/blob/main/logs/keyboard/terminal)
-- [別のターミナルを開くubuntu.ver]()
+- [別のターミナルを開くubuntu.ver](https://github.com/toki-linux/linux-practice-clean/blob/main/logs/environment/keyboard/terminal2)
