@@ -7,3 +7,7 @@
 - [network]()
 - [CLI操作](https://github.com/toki-linux/linux-practice-clean/tree/main/logs/CLI)
 - [environment](https://github.com/toki-linux/linux-practice-clean/tree/main/logs/environment)
+
+
+## まとめ
+- [インフラ基礎]()
