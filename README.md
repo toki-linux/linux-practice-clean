@@ -1,3 +1,23 @@
+# Linux Practice Portfolio
+
+## 概要
+Linux環境における構築・トラブルシュート・ログ解析の学習と実践記録
+
+## できること
+- nginxの403 / 404エラーの原因特定と修正
+- access.log / error.logを用いたトラブルシュート
+- SSH接続および鍵認証設定
+- ネットワークの基本的な通信確認・切り分け
+
+## 技術別の実践内容
+- [nginxトラブルシュート](logs/nginx)
+- [SSH](logs/SSH)
+- [network](logs/network)
+- [CLI操作](logs/CLI)
+- [environment](logs/environment)
+
+## 学習方針
+実際にエラーを再現し、ログから原因を特定し、解決まで行うことで実務を意識した学習を実施
 このリポジトリについて
 
 ### 概要
