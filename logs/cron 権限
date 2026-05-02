@@ -1,0 +1,14 @@
+タイトル：
+cronでログ書き込みができない問題
+
+症状：
+/var/log/nginx/test.log に書き込めない
+
+原因：
+cronが一般ユーザーで実行されていたため権限不足
+
+解決：
+sudo crontab -e でrootのcronに登録
+
+学び：
+cronは「誰が実行するか」で権限が決まる
